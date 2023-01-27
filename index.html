@@ -11,6 +11,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.plusOne {
+			display: none;
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -31,37 +36,92 @@
 	<!-- Footer -->
 	<section id="footer">
 		<div class="container">
-			<script type="text/javascript" src="https://form.jotform.com/jsform/230258212662248"></script>
-			<!-- <form method="post" action="#">
+			<form method="post" action="#">
 				<div class="row gtr-uniform">
-					<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" />
-					</div>
-					<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" />
-					</div>
-					<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+					<div class="col-12"><input type="text" name="rsvpCode" id="rsvpCode" placeholder="RSVP Code"
+							required />
 					</div>
 					<div class="col-12">
+						<input type="radio" id="yes" name="rsvp" checked />
+						<label for="yes">Accepts with pleasure</label>
+
+						<input type="radio" id="no" name="rsvp" />
+						<label for="no">Declines with regret</label>
+					</div>
+					<div class="col-12"><input type="checkbox" id="plusOne" name="plusOne" value="Plus One?"
+							onclick="myFunction()" />
+						<label for="plusOne"> I will be bringing a plus one</label><br>
+					</div>
+					<div class="col-12">
+						<p>Guest Information:</p>
+					</div>
+					<div class="col-6"><input type="text" name="firstName" id="firstName" placeholder="First Name" />
+					</div>
+					<div class="col-6"><input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+					</div>
+					<div class="col-12">
+						<select name="foodChoice" id="foodChoice">
+							<option value="choose" disabled selected hidden>
+								Please
+								choose an
+								option for dinner...
+							</option>
+							<option value="chicken">Chicken</option>
+							<option value="beef">Beef</option>
+							<option value="Vegetarian">Vegetarian</option>
+						</select>
+					</div>
+
+					<div class="col-12">
+						<input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" />
+					</div>
+					<div class="col-12">
+						<input type="text" id="city" name="city" placeholder="City" />
+					</div>
+					<div class="col-6">
+						<input type="text" id="postalCode" name="postalCode" placeholder="Postal Code">
+					</div>
+					<div class="col-6">
+						<input type="text" id="country" name="country" placeholder="Country">
+					</div>
+					<div class="col-12">
+						<input type="email" id="email" name="email" placeholder="Enter your email address" />
+					</div>
+
+					<div class="col-12 plusOne" id="plusOneGuest">
+						<p>Plus One Information:</p>
+					</div>
+					<div class="col-6 plusOne" id="plusOneFirstName"><input class="plusOne" type="text" name="firstName"
+							placeholder="First Name" />
+					</div>
+					<div class="col-6 plusOne" id="plusOneLastName"><input class="plusOne" type="text" name="lastName"
+							id="plusOneLastName" placeholder="Last Name" />
+					</div>
+					<div class="col-12 plusOne" id="plusOneFoodChoice">
+						<select name="foodChoice">
+							<option value="choose" disabled selected hidden>Please choose an option for dinner...
+							</option>
+							<option value="chicken">Chicken</option>
+							<option value="beef">Beef</option>
+							<option value="Vegetarian">Vegetarian</option>
+						</select>
+					</div>
+
+					<div class="col-12">
+						<p>Additional Comments</p>
+						<textarea id="comments" name="comments" rows="5" cols="33"
+							placeholder="Suggest a song, inform us about allergies, or leave us a message!"></textarea>
+					</div>
+
+					<div class="col-12">
 						<ul class="actions special">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="submit" value="Submit" class="primary" /></li>
 						</ul>
 					</div>
+
 				</div>
-			</form> -->
+			</form>
 		</div>
-		<!-- <footer>
-			<ul class="icons">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				<li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
-			</ul>
-		</footer> -->
 	</section>
 
 	<!-- Scripts -->
@@ -71,6 +131,7 @@
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
+	<script src="assets/js/plusOne.js"></script>
 	<script src="assets/js/main.js"></script>
 
 </body>
